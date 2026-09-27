@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=77.0.3", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ai_meeting_room"
+dynamic = ["version"]
+description = "Local, fail-closed multi-agent meeting orchestration."
+license = "AGPL-3.0-only"
+requires-python = ">=3.10"
+dependencies = ["playwright>=1.47,<2.0"]
+
+[tool.setuptools]
+# The project metadata lives beside the package's __init__.py. Map this
+# directory to the import package name so editable installs and wheels have
+# the normal `ai_meeting_room.*` namespace.
+packages = [
+  "ai_meeting_room",
+  "ai_meeting_room.agents",
+  "ai_meeting_room.brain",
+  "ai_meeting_room.core",
+  "ai_meeting_room.events",
+  "ai_meeting_room.integrations",
+  "ai_meeting_room.integrations.cao",
+  "ai_meeting_room.integrations.minimax_exec",
+  "ai_meeting_room.integrations.minimax_sandbox",
+  "ai_meeting_room.persistence",
+  "ai_meeting_room.product",
+  "ai_meeting_room.providers",
+  "ai_meeting_room.runtime",
+  "ai_meeting_room.tasks",
+  "ai_meeting_room.workspace",
+]
+
+[tool.setuptools.package-dir]
+ai_meeting_room = "."
+
+[tool.setuptools.dynamic]
+version = {file = ["VERSION"]}
+
+[tool.setuptools.package-data]
+ai_meeting_room = ["VERSION"]

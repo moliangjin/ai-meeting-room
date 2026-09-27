@@ -1,0 +1,20 @@
+{
+  "name": "ai-meeting-room-desktop",
+  "productName": "AI Meeting Room",
+  "version": "1.0.3",
+  "license": "AGPL-3.0-only",
+  "private": true,
+  "description": "AI Meeting Room V1 desktop shell",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "check": "node --check main.js && node --check brain_host.js && node --check preload.js && node --check brain_preload.js",
+    "test:unit": "node --test test/*.test.js"
+  },
+  "devDependencies": {
+    "electron": "^37.2.6"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.18.2"
+  }
+}

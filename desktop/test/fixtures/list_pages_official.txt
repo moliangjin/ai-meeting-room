@@ -1,0 +1,3 @@
+0: ChatGPT (https://chatgpt.com/) [selected]
+1: Inspect with Chrome Developer Tools (chrome://inspect/#remote-debugging)
+2: Project (Test) - ChatGPT (https://chatgpt.com/c/example)

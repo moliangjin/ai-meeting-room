@@ -1,0 +1,5 @@
+# Empty allowlist is intentional. Every MiniMax endpoint must be added only
+# after a real gateway audit identifies the exact host, port, scheme and reason.
+default: DENY
+directInternetRoute: false
+rules: []

@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "AI Meeting Room Brain",
+  "version": "0.1.0",
+  "description": "Explicitly paired localhost transport for the AI Meeting Room Brain.",
+  "permissions": ["activeTab", "storage", "tabs"],
+  "host_permissions": ["http://127.0.0.1:9890/*"],
+  "content_scripts": [{
+    "matches": ["https://chatgpt.com/*", "https://chat.openai.com/*"],
+    "js": ["content_script.js"],
+    "run_at": "document_idle"
+  }],
+  "background": {"service_worker": "service_worker.js", "type": "module"},
+  "action": {"default_title": "AI Meeting Room Brain", "default_popup": "popup/popup.html"}
+}
